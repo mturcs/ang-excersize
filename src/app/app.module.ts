@@ -8,7 +8,6 @@ import { RouterModule} from "@angular/router";
 import { ListpostComponent } from './listpost/listpost.component';
 import { ExitappComponent } from './exitapp/exitapp.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,11 @@ import { ExitappComponent } from './exitapp/exitapp.component';
     imports: [
         BrowserModule,
         NgbModule,
-        RouterModule.forRoot([])
+        RouterModule.forRoot([
+          {path: 'login', component: LoginComponent},
+          {path: 'list', component: ListpostComponent},
+          {path: 'exit', component: ExitappComponent}
+        ])
     ],
   providers: [],
   bootstrap: [AppComponent]
