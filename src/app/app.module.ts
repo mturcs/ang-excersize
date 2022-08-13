@@ -7,13 +7,16 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule} from "@angular/router";
 import { ListpostComponent } from './listpost/listpost.component';
 import { ExitappComponent } from './exitapp/exitapp.component';
+import {NgbdModalContent} from "./login/ngbd-modal-content.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ListpostComponent,
-    ExitappComponent
+    ExitappComponent,
+    NgbdModalContent
   ],
     imports: [
         BrowserModule,
@@ -22,7 +25,8 @@ import { ExitappComponent } from './exitapp/exitapp.component';
           {path: 'login', component: LoginComponent},
           {path: 'list', component: ListpostComponent},
           {path: 'exit', component: ExitappComponent}
-        ])
+        ]),
+      ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
